@@ -4,13 +4,13 @@
 
 **Live planetary risk intelligence — space weather × earthquakes × wildfires fused into one deterministic, hash-sealed Instability Index with MCP agent tools.**
 
-[![Live Demo](https://img.shields.io/badge/demo-live-22d3ee?style=for-the-badge)](https://pulsegrid.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-22d3ee?style=for-the-badge)](https://pulsegrid-theta.vercel.app)
 [![License: MIT](https://img.shields.io/badge/license-MIT-34d399?style=for-the-badge)](./LICENSE)
 [![Next.js](https://img.shields.io/badge/next.js-16-black?style=for-the-badge)](https://nextjs.org)
 [![Feeds](https://img.shields.io/badge/feeds-USGS_+_NOAA_+_EONET-fbbf24?style=for-the-badge)](#-data-feeds)
 [![MCP](https://img.shields.io/badge/MCP-json--rpc-a78bfa?style=for-the-badge)](#-agent-interface)
 
-[Live App](https://pulsegrid.vercel.app) · [API](https://pulsegrid.vercel.app/api/risk) · [MCP](https://pulsegrid.vercel.app/api/mcp) · [Issues](https://github.com/aniruddhaadak80/pulsegrid/issues)
+[Live App](https://pulsegrid-theta.vercel.app) · [API](https://pulsegrid-theta.vercel.app/api/risk) · [MCP](https://pulsegrid-theta.vercel.app/api/mcp) · [Issues](https://github.com/aniruddhaadak80/pulsegrid/issues)
 
 </div>
 
@@ -173,15 +173,15 @@ npm run dev   # zero env vars — open http://localhost:3000
 ## 🔌 API
 
 ```bash
-curl https://pulsegrid.vercel.app/api/health
-curl https://pulsegrid.vercel.app/api/quakes
-curl https://pulsegrid.vercel.app/api/space
-curl https://pulsegrid.vercel.app/api/disasters
-curl https://pulsegrid.vercel.app/api/risk
-curl -X POST https://pulsegrid.vercel.app/api/mcp \
+curl https://pulsegrid-theta.vercel.app/api/health
+curl https://pulsegrid-theta.vercel.app/api/quakes
+curl https://pulsegrid-theta.vercel.app/api/space
+curl https://pulsegrid-theta.vercel.app/api/disasters
+curl https://pulsegrid-theta.vercel.app/api/risk
+curl -X POST https://pulsegrid-theta.vercel.app/api/mcp \
   -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
-curl -X POST https://pulsegrid.vercel.app/api/mcp \
+curl -X POST https://pulsegrid-theta.vercel.app/api/mcp \
   -H 'content-type: application/json' \
   -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_planetary_briefing","arguments":{}}}'
 ```
@@ -191,7 +191,7 @@ Agent setup (`mcp.json` block — full manifest in `public/mcp.json`):
 ```json
 {
   "mcpServers": {
-    "pulsegrid": { "url": "https://pulsegrid.vercel.app/api/mcp", "transport": "json-rpc" }
+    "pulsegrid": { "url": "https://pulsegrid-theta.vercel.app/api/mcp", "transport": "json-rpc" }
   }
 }
 ```
